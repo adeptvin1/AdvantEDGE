@@ -32,7 +32,7 @@
     line: 'export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin'
 
 - name: Install golangci-lint
-  become: false
+  become: true
   shell: "cd /home/{{ ansible_user }}/; curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin {{golangci_lint_version}}; cp /home/{{ ansible_user }}/go/bin/golangci-lint /usr/local/go/bin/"
 
 # source .bashrc doesn't work so added golang part in .profile. But .profile
