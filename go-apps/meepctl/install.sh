@@ -7,7 +7,7 @@ BASEDIR=$(dirname "$SCRIPT")
 # Configure environment
 GOOS=linux
 IMAGE_NAME=meepctl
-BINDIR=../../bin/meepctl
+BINDIR=/bin/meepctl
 echo "$IMAGE_NAME"
 
 cd $BASEDIR
