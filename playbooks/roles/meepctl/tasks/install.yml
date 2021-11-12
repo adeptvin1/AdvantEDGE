@@ -9,6 +9,8 @@
 - name: Show meepctl config
   shell: "meepctl config"
   register: command_output_meepctl_config
+
+- name: Debug command_output_meepctl_config
   debug:
     var: command_output_meepctl_config
 
@@ -24,6 +26,8 @@
 - name: Verify dockerize
   shell: "docker images | grep meep"
   register: command_output_docker_images_meep
+
+- name: Debug command_output_docker_images_meep
   debug:
     var: command_output_docker_images_meep
 
