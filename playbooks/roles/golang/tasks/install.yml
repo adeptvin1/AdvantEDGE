@@ -33,7 +33,7 @@
 
 - name: Install golangci-lint
   become: false
-  shell: "cd /home/{{ ansible_user }}/; source /home/{{ ansible_user }}/.profile; GO111MODULE=on go get github.com/golangci/golangci-lint/cmd/golangci-lint@{{golangci_lint_version}}"
+  shell: "go install github.com/golangci/golangci-lint/cmd/golangci-lint@v{{golangci_lint_version}}"
   args:
     executable: /bin/bash
 
