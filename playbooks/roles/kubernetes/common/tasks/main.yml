@@ -21,7 +21,7 @@
 - name: Assert currently installed Kubernetes version is supported
   assert:
     that:
-      - installed_k8s_version is match("1.15.*")
+      - installed_k8s_version is match("1.19.*")
     quiet: yes
   when:
     - installed_k8s_version is defined
