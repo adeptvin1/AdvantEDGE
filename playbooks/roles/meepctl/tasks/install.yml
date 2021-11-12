@@ -1,0 +1,34 @@
+---
+
+- name: Install meepctl
+  shell: "cd /home/{{ ansible_user }}/AdvantEDGE/go-apps/meepctl; ./install.sh"
+
+-name: Config meepctl
+  shell: "meepctl config ip {{ meepctl_node_ip }}; meepctl config gitdir /home/{{ ansible_user }}/AdvantEDGE"
+
+-name: Show meepctl config
+  shell: "meepctl config"
+  register: command_output_meepctl_config
+
+-debug:
+  var: command_output_meepctl_config
+
+-name: Meepctl build
+  shell: "meepctl build all {{ meepctl_lint }}"
+
+-name: Meepctl deploy dependencies
+  shell: "meepctl deploy dep"
+
+-name: Meepctl dockerize
+  shell: "meepctl dockerize all"
+
+-name: Verify dockerize
+  shell: "docker images | grep meep"
+  register: command_output_docker_images_meep
+
+-debug:
+  var: command_output_docker_images_meep
+
+-name: Meepctl deploy core
+  shell: "meepctl deploy core"
+

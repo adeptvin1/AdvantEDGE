@@ -1,0 +1,7 @@
+---
+
+- hosts: dev
+  gather_facts: yes
+  become: yes
+  roles:
+    - { role: meepctl, tags: meepctl }
