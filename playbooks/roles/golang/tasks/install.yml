@@ -34,8 +34,6 @@
 - name: Install golangci-lint
   become: false
   shell: "go install github.com/golangci/golangci-lint/cmd/golangci-lint@{{golangci_lint_version}}"
-  args:
-    executable: /bin/bash
 
 # source .bashrc doesn't work so added golang part in .profile. But .profile
 # only works if logging into the machine remotely or use login shell option is
