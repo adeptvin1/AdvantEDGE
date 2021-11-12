@@ -9,7 +9,7 @@ docker_version: "5:19.03"
 
 # Kubernetes
 kube_version: "1.19"
-cni_version: "0.8.7"
+cni_version: "1.0.1"
 master_ip: "{{ hostvars[groups['master'][0]]['ansible_default_ipv4'].address | default(groups['master'][0]) }}"
 network_dir: /etc/kubernetes/network
 kubeadmin_config: /etc/kubernetes/admin.conf
@@ -18,10 +18,10 @@ kubeadmin_config: /etc/kubernetes/admin.conf
 helm_version: "3.3/stable"
 
 # Go
-go_version: "1.15.3"
-golangci_lint_version: "v1.18.0"
+go_version: "1.17.3"
+golangci_lint_version: "v1.43.0"
 
 # Node and NPM
-node_version: "10.16.3"
-npm_version: "6.14.8"
+node_version: "12.22.7"
+npm_version: "6.14.15"
 eslint_version: "5.16.0"
