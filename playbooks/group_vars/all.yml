@@ -15,7 +15,7 @@ network_dir: /etc/kubernetes/network
 kubeadmin_config: /etc/kubernetes/admin.conf
 
 # Helm
-helm_version: "3.7.1/stable"
+helm_version: "3.7.1"
 
 # Go
 go_version: "1.17.3"
