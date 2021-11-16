@@ -13,10 +13,6 @@
   shell: "wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/{{ nvm_version }}/install.sh | bash"
   tags: node
 
-- name: "Update path from NVM"
-  shell: 'export NVM_DIR=\"$([ -z \"${XDG_CONFIG_HOME-}\" ] && printf %s \"${HOME}/.nvm\" || printf %s \"${XDG_CONFIG_HOME}/nvm\")\";[ -s \"$NVM_DIR/nvm.sh\" ] && \. \"$NVM_DIR/nvm.sh\"'
-  tags: node
-
 - name: Install node
   become: false
   shell: "nvm install {{ node_version }}"
