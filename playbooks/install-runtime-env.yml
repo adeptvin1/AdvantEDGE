@@ -2,24 +2,28 @@
 
 - hosts: cluster
   gather_facts: yes
+  ignore_errors: yes
   become: yes
   roles:
     - { role: docker, tags: docker }
 
 - hosts: master
   gather_facts: yes
+  ignore_errors: yes
   become: yes
   roles:
     - { role: kubernetes/master, tags: master }
 
 - hosts: worker
   gather_facts: yes
+  ignore_errors: yes
   become: yes
   roles:
     - { role: kubernetes/worker, tags: worker }
 
 - hosts: master
   gather_facts: yes
+  ignore_errors: yes
   become: yes
   roles:
     - { role: helm, tags: helm }
