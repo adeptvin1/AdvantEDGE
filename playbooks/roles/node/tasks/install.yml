@@ -9,8 +9,12 @@
     - build-essential
     - libssl-dev
 
-- name: "Install NVM"
+- name: Install NVM
   shell: "wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/{{ nvm_version }}/install.sh | bash"
+  tags: node
+
+- name: Install NVM path
+  shell: "bash /home/{{ ansible_user }}/AdvantEDGE/playbook/roles/node/files/install_path_nvm.sh"
   tags: node
 
 - name: Install node
