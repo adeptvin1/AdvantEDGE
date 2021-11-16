@@ -24,7 +24,7 @@
 
 - name: Install node
   become: no
-  shell: /bin/bash -c "source /home/{{ ansible_user }}/.nvm/nvm.sh && npm install -g npm@{{ npm_version }} && npm install -g eslint@{{ eslint_version }} && npm install -g eslint-plugin-react"
+  shell: "nvm install {{ node_version }}"
   tags: node
 
 # - name: Install npm and eslint
