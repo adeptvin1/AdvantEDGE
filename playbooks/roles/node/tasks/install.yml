@@ -11,7 +11,7 @@
 
 - name: Install NVM
   become: no
-  shell: "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/{{ nvm_version }}/install.sh | bash"
+  shell: "whoami; curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/{{ nvm_version }}/install.sh | bash"
   tags: node
 
 - name: Install NVM path
