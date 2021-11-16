@@ -1,12 +1,17 @@
 ---
+- name: Chmod
+  shell: "chown -R {{ ansible_user }} /bin"
 
 - name: Install meepctl
+  become: false
   shell: "cd /home/{{ ansible_user }}/AdvantEDGE/go-apps/meepctl; ./install.sh"
 
 - name: Config meepctl
+  become: false
   shell: "meepctl config ip {{ meepctl_node_ip }}; meepctl config gitdir /home/{{ ansible_user }}/AdvantEDGE"
 
 - name: Show meepctl config
+  become: false
   shell: "meepctl config"
   register: command_output_meepctl_config
 
@@ -15,22 +20,28 @@
     var: command_output_meepctl_config
 
 - name: Meepctl build
+  become: false
   shell: "meepctl build all {{ meepctl_lint }}"
 
 - name: Meepctl deploy dependencies
+  become: false
   shell: "meepctl deploy dep"
 
 - name: Meepctl dockerize
+  become: false
   shell: "meepctl dockerize all"
 
 - name: Verify dockerize
+  become: false
   shell: "docker images | grep meep"
   register: command_output_docker_images_meep
 
 - name: Debug command_output_docker_images_meep
+  become: false
   debug:
     var: command_output_docker_images_meep
 
 - name: Meepctl deploy core
+  become: false
   shell: "meepctl deploy core"
 
