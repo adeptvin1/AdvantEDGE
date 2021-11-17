@@ -4,7 +4,7 @@
 
 - name: Install meepctl
   become: false
-  shell: "cd /home/{{ ansible_user }}/AdvantEDGE/go-apps/meepctl; ./install.sh"
+  shell: "cd /home/{{ ansible_user }}/AdvantEDGE/go-apps/meepctl; ./install.sh; export PATH=$PATH:/bin/meepctl"
 
 - name: Config meepctl
   become: false
