@@ -19,13 +19,14 @@
   debug:
     var: command_output_meepctl_config
 
+- name: Meepctl deploy dependencies
+  become: false
+  shell: "meepctl deploy dep"
+
 - name: Meepctl build
   become: false
   shell: "meepctl build all {{ meepctl_lint }}"
 
-- name: Meepctl deploy dependencies
-  become: false
-  shell: "meepctl deploy dep"
 
 - name: Meepctl dockerize
   become: false
