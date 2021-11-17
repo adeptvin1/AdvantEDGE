@@ -8,5 +8,6 @@
     quiet: yes
 
 - name: Deploy Meepctl
+  ignore_errors: yes
   include_tasks:
     file: install.yml
