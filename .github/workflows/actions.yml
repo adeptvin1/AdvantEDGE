@@ -3,6 +3,22 @@ on: [push]
 jobs:
   Yamllint:
     runs-on: ubuntu-latest
-    steps:
-      - run: sudo apt install yamllint
-      - run: ls ${{ github.workspace }}
+
+      - name: Cache multiple paths
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/cache
+            !~/cache/exclude
+          key: ${{ runner.os }}-${{ hashFiles('**/lockfiles') }}
+
+      - name: Install deps
+        run: sudo apt install yamllint -y
+
+      - name: Check envvars
+        run: pwd
+
+      - name: Check yamllint
+        working-directory: /home/runner/work/AdvantEDGE/AdvantEDGE
+        run: |
+          yamllint . -f parsable
