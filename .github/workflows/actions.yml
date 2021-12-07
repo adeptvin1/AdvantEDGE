@@ -7,9 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 'Yamllint'
-        uses: hfrSchmidt/ansible-lint-github-action@v1.0.1
+        uses: nosborn/github-action-yamllint@v1
         with:
-          project_dir: 'AdvantEDGE/playbook/'
-          config_file: 'install-development-env.yml'
-          args: '--parseable-severity --force-color'
+          file_or_dir: AdvantEDGE/playbooks/install-development-env.yml
 
