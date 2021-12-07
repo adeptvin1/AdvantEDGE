@@ -9,4 +9,5 @@ jobs:
         uses: actions/checkout@v2
       - name: Run yamllint
         uses: frenck/action-yamllint@v1
-        path: /playbook
+        with:
+          path: /playbook
