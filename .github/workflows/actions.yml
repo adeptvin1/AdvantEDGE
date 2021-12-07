@@ -4,5 +4,5 @@ jobs:
   Yamllint:
     runs-on: ubuntu-latest
     steps:
-      - run: sudo apt update && sudo apt upgrade && sudo apt install yamllint
-      - run: ls $GITHUB_REPOSITORY
+      - run: sudo apt install yamllint
+      - run: ls ${{ github.workspace }}
