@@ -9,7 +9,7 @@ jobs:
       - name: 'Yamllint'
         uses: hfrSchmidt/ansible-lint-github-action@v1.0.1
         with:
-          project_dir: 'playbook'
+          project_dir: 'AdvantEDGE/playbook/'
           config_file: 'install-development-env.yml'
           args: '--parseable-severity --force-color'
 
