@@ -1,24 +1,12 @@
-name: First Actions
-on: [push]
+name: Lint
+on: [push, pull_request]
 jobs:
-  Yamllint:
+  yamllint:
+    name: yamllint
     runs-on: ubuntu-latest
     steps:
-      - name: Cache multiple paths
-        uses: actions/cache@v2
-        with:
-          path: |
-            ~/cache
-            !~/cache/exclude
-          key: ${{ runner.os }}-${{ hashFiles('**/lockfiles') }}
-
-      - name: Install deps
-        run: sudo apt install yamllint -y
-
-      - name: Check envvars
-        run: pwd
-
-      - name: Check yamllint
-        working-directory: /home/runner/work/AdvantEDGE/AdvantEDGE/playbook
-        run: |
-          yamllint . -f parsable
+      - name: Check out code from GitHub
+        uses: actions/checkout@v2
+      - name: Run yamllint
+        uses: frenck/action-yamllint@v1
+        path: /playbook
