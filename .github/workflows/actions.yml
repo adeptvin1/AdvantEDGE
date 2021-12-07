@@ -19,6 +19,6 @@ jobs:
         run: pwd
 
       - name: Check yamllint
-        working-directory: /home/runner/work/AdvantEDGE/AdvantEDGE
+        working-directory: /home/runner/work/AdvantEDGE/AdvantEDGE/playbook
         run: |
           yamllint . -f parsable
