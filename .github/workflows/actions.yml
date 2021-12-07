@@ -6,4 +6,3 @@ jobs:
     steps:
       - run: sudo apt install yamllint
       - run: ls ${{ github.workspace }}
-      - run: 
