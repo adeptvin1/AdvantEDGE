@@ -1,13 +1,8 @@
-name: GitHub Actions 
+name: First Actions
 on: [push]
 jobs:
-
-  yamllint:
-    name: 'Yamllint'
+  Yamllint:
     runs-on: ubuntu-latest
     steps:
-      - name: 'Yamllint'
-        uses: nosborn/github-action-yamllint@v1
-        with:
-          file_or_dir: AdvantEDGE/playbooks/install-development-env.yml
-
+      - run: sudo apt update && apt upgrade && apt install yamllint
+      - run: ls
