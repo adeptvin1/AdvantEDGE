@@ -5,4 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: sudo apt install yamllint
-      - run: yamllint ${{ github.workspace }}/playbook/*.yml
+      - run: cd ${{ github.workspace }}
+      - run: ls
