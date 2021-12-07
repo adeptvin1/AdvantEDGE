@@ -3,7 +3,7 @@ on: [push]
 jobs:
   Yamllint:
     runs-on: ubuntu-latest
-
+    steps:
       - name: Cache multiple paths
         uses: actions/cache@v2
         with:
