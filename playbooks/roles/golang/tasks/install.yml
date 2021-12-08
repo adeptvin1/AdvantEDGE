@@ -33,7 +33,7 @@
 
 - name: Install golangci-lint
   become: true
-  shell: "cd /home/{{ ansible_user }}/; curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b /usr/local/go/bin {{golangci_lint_version}}; cp /home/{{ ansible_user }}/go/bin/golangci-lint /usr/local/go/bin/"
+  shell: "cd /home/{{ ansible_user }}/; curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s v1.43.0"
 
 # source .bashrc doesn't work so added golang part in .profile. But .profile
 # only works if logging into the machine remotely or use login shell option is
