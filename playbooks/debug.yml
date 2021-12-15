@@ -5,4 +5,4 @@
   tasks:
     - name: Debug
       debug:
-        msg: {{ hostvars[groups['master'][0]] }}
+        msg: "{{ hostvars[groups['master'][0]] }}"
