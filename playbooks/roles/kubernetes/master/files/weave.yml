@@ -9,7 +9,7 @@ items:
         cloud.weave.works/launcher-info: |-
           {
             "original-request": {
-              "url": "/k8s/v1.15/net?env.WEAVE_MTU=1500",
+              "url": "/k8s/v1.19/net?env.WEAVE_MTU=1500",
               "date": "Mon Apr 06 2020 14:16:03 GMT+0000 (UTC)"
             },
             "email-address": "support@weave.works"
@@ -25,7 +25,7 @@ items:
         cloud.weave.works/launcher-info: |-
           {
             "original-request": {
-              "url": "/k8s/v1.15/net?env.WEAVE_MTU=1500",
+              "url": "/k8s/v1.19/net?env.WEAVE_MTU=1500",
               "date": "Mon Apr 06 2020 14:16:03 GMT+0000 (UTC)"
             },
             "email-address": "support@weave.works"
@@ -66,7 +66,7 @@ items:
         cloud.weave.works/launcher-info: |-
           {
             "original-request": {
-              "url": "/k8s/v1.15/net?env.WEAVE_MTU=1500",
+              "url": "/k8s/v1.19/net?env.WEAVE_MTU=1500",
               "date": "Mon Apr 06 2020 14:16:03 GMT+0000 (UTC)"
             },
             "email-address": "support@weave.works"
@@ -89,7 +89,7 @@ items:
         cloud.weave.works/launcher-info: |-
           {
             "original-request": {
-              "url": "/k8s/v1.15/net?env.WEAVE_MTU=1500",
+              "url": "/k8s/v1.19/net?env.WEAVE_MTU=1500",
               "date": "Mon Apr 06 2020 14:16:03 GMT+0000 (UTC)"
             },
             "email-address": "support@weave.works"
@@ -121,7 +121,7 @@ items:
         cloud.weave.works/launcher-info: |-
           {
             "original-request": {
-              "url": "/k8s/v1.15/net?env.WEAVE_MTU=1500",
+              "url": "/k8s/v1.19/net?env.WEAVE_MTU=1500",
               "date": "Mon Apr 06 2020 14:16:03 GMT+0000 (UTC)"
             },
             "email-address": "support@weave.works"
@@ -145,7 +145,7 @@ items:
         cloud.weave.works/launcher-info: |-
           {
             "original-request": {
-              "url": "/k8s/v1.15/net?env.WEAVE_MTU=1500",
+              "url": "/k8s/v1.19/net?env.WEAVE_MTU=1500",
               "date": "Mon Apr 06 2020 14:16:03 GMT+0000 (UTC)"
             },
             "email-address": "support@weave.works"
