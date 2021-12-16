@@ -22,7 +22,7 @@ go_version: "1.17.3"
 golangci_lint_version: "v1.43.0"
 
 # Node and NPM
-nvm_version: "0.39.0"
+nvm_version: "v0.39.0"
 node_version: "12.22.7"
 npm_version: "6.14.15"
 eslint_version: "5.16.0"
