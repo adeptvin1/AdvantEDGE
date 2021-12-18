@@ -27,27 +27,10 @@
   shell: "bash /home/{{ ansible_user }}/AdvantEDGE/playbooks/roles/node/files/install_path_nvm.sh"
   tags: node
 
-- name: Check NVM sinlink
-  shell: "find / -type l | grep nvm"
-  tags: node
-
-- name: Check NVM sinlink 
-  become: no
-  shell: "source ~/.nvm/nvm.sh"
-  tags: node
-
-- name: Check NVM sinlink (become no)
-  become: no
-  shell: "nvm"
-  tags: node
-
 - name: Install node
   become: no
-  shell: "nvm install {{ node_version }}"
+  shell: /bin/bash -c "source /home/{{ ansible_user }}/.nvm/nvm.sh && nvm install {{ node_version }}"
   tags: node
-
-
-
 
 - name: Install npm and eslint
   become: no
