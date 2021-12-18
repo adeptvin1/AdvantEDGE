@@ -18,9 +18,17 @@
   shell: "wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/{{ nvm_version }}/install.sh | bash"
   tags: node
 
+- name: Check NVM sinlink
+  shell: "find / -type l | grep nvm"
+  tags: node
+
 - name: Install NVM path
   become: no
-  shell: "sudo find / -type l; bash /home/{{ ansible_user }}/AdvantEDGE/playbooks/roles/node/files/install_path_nvm.sh; sudo find / -type l"
+  shell: "bash /home/{{ ansible_user }}/AdvantEDGE/playbooks/roles/node/files/install_path_nvm.sh"
+  tags: node
+
+- name: Check NVM sinlink
+  shell: "find / -type l | grep nvm"
   tags: node
 
 - name: Install node
