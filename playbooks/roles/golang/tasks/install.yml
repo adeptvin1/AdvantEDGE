@@ -8,7 +8,7 @@
 - name: Install Go
   unarchive:
     remote_src: yes
-    src: "/tmp/go{{go_version}}.linux-amd64.tar.gz"
+    src: "/tmp/go{{ go_version }}.linux-amd64.tar.gz"
     dest: /usr/local
 
 - name: Create Go working directory
