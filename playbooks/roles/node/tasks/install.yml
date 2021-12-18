@@ -29,7 +29,7 @@
 
 - name: Check NVM sinlink
   become: no
-  shell: "$NVM_DIR"
+  shell: "whoami"
   tags: node
 
 - name: Install node
