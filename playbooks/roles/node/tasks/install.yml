@@ -24,7 +24,7 @@
 
 - name: Install NVM path
   become: no
-  shell: "bash /home/{{ ansible_user }}/AdvantEDGE/playbooks/roles/node/files/install_path_nvm.sh"
+  ansible.builtin.script: "/home/{{ ansible_user }}/AdvantEDGE/playbooks/roles/node/files/install_path_nvm.sh"
   tags: node
 
 - name: Check NVM sinlink
