@@ -31,12 +31,13 @@
   shell: "find / -type l | grep nvm"
   tags: node
 
-- name: Check NVM sinlink (become no)
+- name: Check NVM sinlink 
   become: no
-  shell: "nvm"
+  shell: "source ~/.nvm/nvm.sh"
   tags: node
 
-- name: Check NVM sinlink (become yes)
+- name: Check NVM sinlink (become no)
+  become: no
   shell: "nvm"
   tags: node
 
