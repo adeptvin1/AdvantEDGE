@@ -2,6 +2,10 @@
 - name: Chmod
   shell: "chown -R {{ ansible_user }} /bin"
 
+- name: Add path to Golang
+  become: false
+  shell: "export PATH=$PATH:/home/{{ ansible_user }}/gocode"
+
 - name: Install meepctl
   become: false
   shell: "cd /home/{{ ansible_user }}/AdvantEDGE/go-apps/meepctl; ./install.sh; export PATH=$PATH:/bin/meepctl"

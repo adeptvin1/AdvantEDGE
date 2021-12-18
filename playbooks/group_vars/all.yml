@@ -29,4 +29,4 @@ eslint_version: "5.16.0"
 
 # Meepctl
 meepctl_lint: "--nolint"
-meepctl_node_ip: "{{ hostvars[groups['master'][0]]['ansible_default_ipv4'].address | default(groups['master'][0]) }}"
+meepctl_node_ip: "{{ master_ip }}"
