@@ -28,7 +28,7 @@
   shell: "nvm install {{ node_version }}"
   tags: node
 
-# - name: Install npm and eslint
-#  become: no
-#  shell: "npm install -g eslint@{{ eslint_version }} && npm install -g eslint-plugin-react"
-#  tags: node
+- name: Install npm and eslint
+  become: no
+  shell: "npm install -g eslint@{{ eslint_version }} && npm install -g eslint-plugin-react"
+  tags: node
