@@ -22,3 +22,4 @@
   include_tasks:
     file: install.yml
   when: go_check.stdout == ''
+  tags: golang
