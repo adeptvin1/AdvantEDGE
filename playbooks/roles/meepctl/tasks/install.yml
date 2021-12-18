@@ -4,7 +4,7 @@
 
 - name: Add path to Golang
   become: false
-  shell: "export PATH=$PATH:/home/{{ ansible_user }}/gocode"
+  shell: "export PATH=$PATH:/home/{{ ansible_user }}/gocode; $GOPATH"
 
 - name: Install meepctl
   become: false
