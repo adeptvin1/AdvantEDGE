@@ -28,7 +28,8 @@
   tags: node
 
 - name: Check NVM sinlink
-  shell: "find / -type l | grep nvm"
+  become: no
+  shell: "$NVM_DIR"
   tags: node
 
 - name: Install node
